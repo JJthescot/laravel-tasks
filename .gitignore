@@ -11,6 +11,7 @@ npm-debug.log
 .env
 .env.production
 /.azure
+launch.json
 
 # Created by https://www.gitignore.io/api/laravel
 

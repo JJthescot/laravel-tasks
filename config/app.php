@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // -- Added Passport Auth Provider - JJ (23/08/22)
+        // Passport Auth
+//        Laravel\Passport\PassportServiceProvider::class,
     ],
 
     /*
