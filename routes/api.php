@@ -37,9 +37,11 @@ Route::controller(App\Http\Controllers\Api\RegisterController::class)->group(fun
 });
 
 Route::middleware('auth:sanctum')->group( function () {
-    Route::resource('contract', App\Http\Controllers\Api\ContractController::class);
-    Route::resource('job', App\Http\Controllers\Api\JobController::class);
-    Route::resource('messagetype', App\Http\Controllers\Api\MessageTypeController::class);
-    Route::resource('message', App\Http\Controllers\Api\MessageController::class);
+    Route::resources([
+        'contract' => App\Http\Controllers\Api\ContractController::class,
+        'job' => App\Http\Controllers\Api\JobController::class,
+        'messagetype' => App\Http\Controllers\Api\MessageTypeController::class,
+        'message' => App\Http\Controllers\Api\MessageController::class,
+    ]);
 });
 

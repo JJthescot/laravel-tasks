@@ -17,8 +17,10 @@ class ContractController extends BaseController
      */
     public function index()
     {
-        $contract = Contract::all();
+       $contract = Contract::all();//->with(['jobs']);
+//        $jobs = Contract::find(1)->jobs;
     
+//        return $this->sendResponse(ContractResource::collection($contract), 'Contracts retrieved successfully.');
         return $this->sendResponse(ContractResource::collection($contract), 'Contracts retrieved successfully.');
     }
 

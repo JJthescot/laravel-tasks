@@ -75,7 +75,7 @@ class JobController extends BaseController
         $input = $request->all();
    
         $validator = Validator::make($input, [
-            'idContract' => 'required',
+            'contract_id' => 'required',
             'jobNumber' => 'required',
         ]);
    
@@ -83,7 +83,7 @@ class JobController extends BaseController
             return $this->sendError('Validation Error.', $validator->errors());       
         }
    
-        $job->idContract = $input['idContract'];
+        $job->idContract = $input['contract_id'];
         $job->jobNumber = $input['jobNumber'];
         $job->save();
    

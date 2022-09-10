@@ -7,6 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Contract extends Model
 {
-   use HasFactory;
+    use HasFactory;
     protected $fillable = ['name'];//, 'job_idJob'];
+    public function jobs(){
+        return $this->hasMany( Job::class );
+    }
 }

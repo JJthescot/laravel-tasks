@@ -17,7 +17,7 @@ class JobResource extends JsonResource
 //        return parent::toArray($request);
         return [
             'id' => $this->id,
-            'idContract' => $this->idContract,
+            'contract_id' => $this->contract_id,
             'jobNumber' => $this->jobNumber,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),

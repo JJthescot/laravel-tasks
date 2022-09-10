@@ -15,7 +15,7 @@ class JobFactory extends Factory
     {
         return [
             'jobNumber' => $this->faker->randomNumber(2),
-            'idContract' => $this->faker->randomNumber(2),
+            'contract_id' => $this->faker->numberBetween(1,21),
         ];
     }
 }

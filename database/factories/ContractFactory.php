@@ -14,7 +14,7 @@ class ContractFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
+            'name' => "M".$this->faker->unique()->randomNumber(3),
         ];
     }
 }

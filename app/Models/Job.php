@@ -8,5 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Job extends Model
 {
     use HasFactory;
-    protected $fillable = ['jobNumber', 'idContract'];
+    protected $fillable = ['jobNumber', 'contract_id'];
+    public function contract(){
+        return $this->belongsTo(Contract::class);
+    }
 }
