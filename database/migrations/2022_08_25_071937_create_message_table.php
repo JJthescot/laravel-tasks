@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Contract;
+use App\Models\Job;
+use App\Models\MessageType;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,10 +17,12 @@ class CreateMessageTable extends Migration
     public function up()
     {
         Schema::create('messages', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(0);
             $table->string('messageContent');
-            $table->integer('message_types_id');
-            $table->integer('jobs_id');
+            $table->foreignIdFor(MessageType::class);
+            $table->foreignIdFor(Contract::class);
+            $table->foreignIdFor(Job::class)->nullable();
+            $table->morphs('messagable');
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ class JobResource extends JsonResource
             'id' => $this->id,
             'contract_id' => $this->contract_id,
             'jobNumber' => $this->jobNumber,
+            'messages' => $this->messages,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
         ];

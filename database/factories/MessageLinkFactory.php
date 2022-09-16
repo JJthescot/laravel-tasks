@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ContractFactory extends Factory
+class MessageLinkFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,8 +14,7 @@ class ContractFactory extends Factory
     public function definition()
     {
         return [
-            'name' => "M".$this->faker->unique()->randomNumber(3),
-            'desc' => $this->faker->sentence(),
+            'message_id' => $this->faker->numberBetween(1,21),
         ];
     }
 }

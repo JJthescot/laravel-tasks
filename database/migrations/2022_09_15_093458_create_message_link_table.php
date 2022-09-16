@@ -1,10 +1,11 @@
 <?php
 
+use App\Models\Message;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateMessageLinkTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +14,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('contracts', function (Blueprint $table) {
-            $table->id()->startingValue(0);
-            $table->string('name');
-            $table->string('desc')->nullable();
-//            $table->integer('job_idJob');
+        Schema::create('message_links', function (Blueprint $table) {
+            $table->id('message_link_id')->startingValue(1);
+            $table->foreignIdFor(Message::class);
+            $table->string('message_link_type');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('contracts');
+        Schema::dropIfExists('message_links');
     }
-};
+}

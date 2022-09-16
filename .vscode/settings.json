@@ -1,3 +1,5 @@
 {
-    "vscode-mysql.enableTelemetry": false
+    "vscode-mysql.enableTelemetry": false,
+    "php.debug.ideKey": "VSCODE",
+    "php.debug.executablePath": "C:\\Program Files\\PHP\\v8.1.10"
 }

@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('message_types', function (Blueprint $table) {
-            $table->id();
+            $table->id()->startingValue(0);
             $table->string('messageTypeName');
             $table->timestamps();
         });

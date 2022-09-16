@@ -19,8 +19,9 @@ class ContractResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
+            'desc' => $this->desc,
             'jobs' => $this->jobs,//\App\Models\Contract::find(1)->jobs->get(),
-//            'job_idJob' => $this->job_idJob,
+            'messages' => $this->messages,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
         ];

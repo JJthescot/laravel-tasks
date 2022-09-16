@@ -18,11 +18,13 @@ class DatabaseSeeder extends Seeder
         DB::table('jobs')->truncate();
         DB::table('message_types')->truncate();
         DB::table('messages')->truncate();
+//        DB::table('message_links')->truncate();
         // \App\Models\User::factory(10)->create();
         // $this->call(ContractsTableSeeder::class);
         \App\Models\Contract::factory(20)->create();
-        \App\Models\Job::factory(100)->create();
+        \App\Models\Job::factory(20)->create();
         \App\Models\MessageType::factory(4)->create();
-        \App\Models\Message::factory(10)->create();
+        \App\Models\Message::factory(100)->create();
+//        \App\Models\MessageLink::factory(100)->create();
     }
 }

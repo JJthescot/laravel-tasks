@@ -18,8 +18,8 @@ class MessageResource extends JsonResource
         return [
             'id' => $this->id,
             'messageContent' => $this->messageContent,
-            'message_types_id' => $this->message_types_id,
-            'jobs_id' => $this->jobs_id,
+            'message_type_id' => $this->message_type_id,
+            'job_id' => $this->job_id,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
         ];
